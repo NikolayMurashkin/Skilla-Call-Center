@@ -1,0 +1,15 @@
+.statistic {
+	display: flex;
+	flex-direction: column;
+	row-gap: 7px;
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 148%;
+		color: #122945;
+	}
+	&__progress {
+		background: #dee6f5;
+		border-radius: 12px;
+	}
+}

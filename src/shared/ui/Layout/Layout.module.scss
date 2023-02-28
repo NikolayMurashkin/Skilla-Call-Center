@@ -1,0 +1,14 @@
+.layout {
+	display: grid;
+	height: 100vh;
+	max-width: 100vw;
+	grid-template-columns: 240px 1680px;
+	grid-template-rows: 64px auto;
+	grid-template-areas:
+		"sidebar header"
+		"sidebar content";
+	&__main {
+		grid-area: content;
+		background: yellowgreen;
+	}
+}
