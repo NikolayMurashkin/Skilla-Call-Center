@@ -8,8 +8,40 @@
 		line-height: 148%;
 		color: #122945;
 	}
+	&__value {
+		&_green {
+			color: #00a775;
+		}
+		&_yellow {
+			color: #ffd500;
+		}
+		&_red {
+			color: #ea1a4f;
+		}
+	}
 	&__progress {
-		background: #dee6f5;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: none;
+		height: 6px;
 		border-radius: 12px;
+		&[value]::-webkit-progress-value {
+			border-top-left-radius: 12px;
+			border-bottom-left-radius: 12px;
+		}
+		&[value]::-webkit-progress-bar {
+			background-color: #dee6f5;
+			border-radius: 12px;
+		}
+		&_green[value]::-webkit-progress-value {
+			background-color: #00a775;
+		}
+		&_yellow[value]::-webkit-progress-value {
+			background-color: #ffd500;
+		}
+		&_red[value]::-webkit-progress-value {
+			background-color: #ea1a4f;
+		}
 	}
 }

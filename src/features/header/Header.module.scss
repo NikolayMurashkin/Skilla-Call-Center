@@ -1,4 +1,119 @@
 .header {
 	grid-area: header;
-	background: rgb(43, 116, 226);
+	background: #fff;
+	display: flex;
+	align-items: center;
+	padding: 8px 115px 8px 120px;
+	&__date {
+		color: #899cb1;
+		margin-right: 86px;
+	}
+	&__info {
+		display: flex;
+		column-gap: 56px;
+		margin-right: 189px;
+		transition: all .3s ease;
+		&.active {
+			margin-right: 20px;
+		}
+	}
+	&__controls {
+		display: flex;
+	}
+	&__search {
+		display: flex;
+		align-items: center;
+		width: 0;
+		position: relative;
+		transition: all .3s ease;
+		&_input {
+			border: 0;
+			background: transparent;
+			width: 0%;
+			height: 40px;
+			transition: all .3s ease;
+			&.active {
+				background: #ffffff;
+				border: 1px solid #eaf0fa;
+				border-radius: 48px;
+				width: 98%;
+				padding-left: 46px;
+			}
+			&.active:focus {
+				border: 1px solid #005ff8;
+			}
+		}
+		&_icon {
+			position: absolute;
+			// left: 34px;
+			left: -34px;
+			cursor: pointer;
+			& path {
+				transition: all 0.3s ease;
+			}
+			&:hover path {
+				fill: #005ff8;
+			}
+		}
+		&_clear {
+			cursor: pointer;
+			position: absolute;
+			right: 27px;
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+			& path {
+				transition: all 0.3s ease;
+			}
+			&:hover path {
+				fill: #005ff8;
+			}
+		}
+		&.active &_clear {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: inherit;
+			transition: all 0.6s ease;
+		}
+		&.active &_icon {
+			left: 34px;
+		}
+		&.active {
+			width: 280px;
+			padding-left: 18px;
+			transition: all 0.6s ease;
+		}
+	}
+	&__select {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		color: #899cb1;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		font-size: 15px;
+		line-height: 140%;
+		margin-right: 40px;
+		&:hover {
+			color: #005ff8;
+			opacity: 0.87;
+		}
+		&:hover .header__arrow path {
+			fill: #005ff8;
+		}
+	}
+	&__user {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+		&:hover .header__arrow path {
+			fill: #005ff8;
+		}
+		&_img {
+			border-radius: 50%;
+		}
+	}
+}
+.header__arrow path {
+	transition: all 0.3s ease;
 }
