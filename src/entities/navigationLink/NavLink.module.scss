@@ -1,0 +1,30 @@
+.nav-link {
+	display: flex;
+	column-gap: 14px;
+	align-items: center;
+	cursor: pointer;
+	padding: 14px 12px;
+	transition: all 0.3s ease;
+	svg path {
+		transition: all 0.3s ease;
+	}
+	&:hover {
+		background: rgba(216, 228, 251, 0.32);
+		&__text {
+			color: #fff;
+		}
+	}
+	&:hover &__text {
+		color: #fff;
+	}
+	&:hover svg path {
+		fill-opacity: 100%;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		color: rgba(255, 255, 255, 0.6);
+		transition: all 0.3s ease;
+	}
+}

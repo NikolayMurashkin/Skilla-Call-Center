@@ -1,4 +1,10 @@
 .sidebar {
+	padding: 12px 0px;
 	grid-area: sidebar;
-	background: rebeccapurple;
+	background: #091336;
+	&__logo {
+		margin-left: 12px;
+		margin-bottom: 12px;
+		cursor: pointer;
+	}
 }
