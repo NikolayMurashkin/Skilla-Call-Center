@@ -3,16 +3,16 @@
 	background: #fff;
 	display: flex;
 	align-items: center;
-	padding: 8px 115px 8px 120px;
+	padding: 8px max(5vw, 30px);
 	&__date {
 		color: #899cb1;
-		margin-right: 86px;
+		margin-right: max(2vw, 10px);
 	}
 	&__info {
 		display: flex;
-		column-gap: 56px;
-		margin-right: 189px;
-		transition: all .3s ease;
+		column-gap: max(2vw, 30px);
+		margin-right: max(2vw, 30px);
+		transition: all 0.3s ease;
 		&.active {
 			margin-right: 20px;
 		}
@@ -25,13 +25,13 @@
 		align-items: center;
 		width: 0;
 		position: relative;
-		transition: all .3s ease;
+		transition: all 0.3s ease;
 		&_input {
 			border: 0;
 			background: transparent;
 			width: 0%;
 			height: 40px;
-			transition: all .3s ease;
+			transition: all 0.3s ease;
 			&.active {
 				background: #ffffff;
 				border: 1px solid #eaf0fa;
